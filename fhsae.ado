@@ -45,18 +45,20 @@ program define fhsae, eclass
 #delimit cr		
 set more off
 
-if ("`censuspop'"=="" | "`aggarea'"=="") {
+if ("`censuspop'"!="" & "`aggarea'"!="") local doagg = 1
+
+if (`doagg'==0 & ("`censuspop'"=="" | "`aggarea'"=="") {
 	dis as error "For aggragete results both a census population for the area, along for the area at which to aggregate are needed"
 	error 198
 	exit
 }
-if ("`censuspop'"!="" & lower("`method'")!="reml"){
+if (`doagg'==1 & lower("`method'")!="reml"){
 	dis as error "Aggregation of results is only possible with REML"
 	error 198
 	exit	
 }
 
-if ("`censuspop'"!="" & "`aggarea'"!="") local doagg = 1
+
 
 if (`doagg'==1 & "`outsample'"==""){
 	dis as error "Aggregation must be used with outsample options"
