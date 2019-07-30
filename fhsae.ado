@@ -47,7 +47,7 @@ set more off
 
 if ("`censuspop'"!="" & "`aggarea'"!="") local doagg = 1
 
-if (`doagg'==0 & ("`censuspop'"=="" | "`aggarea'"=="") {
+if (`doagg'==0 & ("`censuspop'"=="" | "`aggarea'"=="")) {
 	dis as error "For aggragete results both a census population for the area, along for the area at which to aggregate are needed"
 	error 198
 	exit
