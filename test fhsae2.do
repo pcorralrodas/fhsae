@@ -9,6 +9,7 @@ else global main   "C:\Users\\`c(username)'\WBG\Paul Andres Corral Rodas - 10. M
 global hbs    "$main\1.data\HBS\"
 global output "$main\1.data\output\"
 
+//prueba
 *===============================================================================
 // Open data, and include location means
 *===============================================================================
