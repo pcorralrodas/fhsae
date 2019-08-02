@@ -159,6 +159,8 @@ if (`doagg'==1){
 }
 
 
+
+
 noi{
 	 mat rownames `beta' = `indeps' _cons
 	 mat `beta' = `beta''
