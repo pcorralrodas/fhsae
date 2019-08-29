@@ -134,7 +134,7 @@ replace source = "FH R" if missing(source)
 
 
 global myX c_sh_male c_d_student c_d_main_own c_d_self_ag_a
-cap run "C:\Users\WB378870\OneDrive - WBG\000.my_ados\fhsae\fhsae.ado"
+run "C:\Users\WB378870\OneDrive - WBG\000.my_ados\fhsae\fhsae.ado"
 cap drop raion
 gen raion = int(HID/1e4)
 /*

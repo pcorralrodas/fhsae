@@ -219,7 +219,6 @@ noi{
 			mata: V   = *(_Fh[1,2])
 			mata: g2d = quadcross(gamma',gamma'):*(quadcross(quadcross(_x1',V)',_x1'))	
 			mata : _mse = diag(g1d+2*g3d) + g2d	
-			mata : st_view(uu=.,.,"HID","`sm'")
 			
 			//mata : _mse = diagonal(_mse)
 					
